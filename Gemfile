@@ -8,8 +8,14 @@ gem 'rails', '3.2.13'
 #gem 'sqlite3'
 
 gem 'devise'
-gem 'mysql2','0.3.18'
 
+group :development, :test do
+    gem 'mysql2','0.3.18'
+end
+
+group :production do
+    gem 'pg','0.17.1'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
