@@ -1,0 +1,18 @@
+<% if @blogger != nil %>
+<div>
+    <div class="login_user_info">
+        <%=@blogger.email %> 您好！ &nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="/blog/entries/<%=@blogger.id %>/">查看个人博客</a>&nbsp;&nbsp; | &nbsp;&nbsp;
+        <%=link_to "退出",destroy_blogger_session_path,:method=>:delete%>
+    </div>
+</div>
+
+<table>
+    <tr><td class="menu_text">
+       <%= link_to '所有记事', :controller=>'entries', :action=>'index' %>
+    &nbsp;&nbsp;|&nbsp;&nbsp;
+       <%= link_to '投稿', new_entry_path %>&nbsp;&nbsp;&nbsp;
+    </td></tr>
+</table>
+<hr>
+<% end %>

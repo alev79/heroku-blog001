@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>亮博客</title>
+  <%= stylesheet_link_tag "blog", :media=>'screen' %>
+  <%= javascript_include_tag "application" %>
+  <%= auto_discovery_link_tag :rss,:action=>'index', :format=>'xml' %>
+</head>
+<body>
+<%= render 'common/header' %>
+<br/>
+<br/>
+<%= render 'common/menu' %>
+<section>
+   <%= yield %>
+</section>
+<nav>
+</nav>
+<%= render 'common/footer' %>
+</body>
+</html>
+

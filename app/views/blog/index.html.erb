@@ -1,0 +1,17 @@
+<table>
+    <tr>
+       <th><span class="personal_title"><%=@current_user_email%>的个人记事</span></th>
+    </tr>
+    <% @entries.each do |entry| %>
+        <tr>
+            <td>
+            <div class="blog_entry">
+               标题: <%= entry.title%><br/>
+               <%=format_string_length(entry.body,20) %><br/>
+            　 发表日期: <%= entry.created_at.strftime("%Y/%m/%d") %>
+            </div>
+            <%= link_to '详细', :controller=>'blog',:action=>'show',:id=>@blogger.id,:entry_id=>entry.id%>
+            </td>
+        </tr>
+    <% end %>
+</table>

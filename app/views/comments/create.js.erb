@@ -1,0 +1,13 @@
+/*
+$("#comment_list").html(
+"<%@entry.comments.each do |comment|%><%if comment.body !=nil%><%=comment.body%> by <%=comment.name %><br/><hr><%end%><%end%>"
+);
+*/
+
+alert("成功保存评论！");
+
+if("<%=@prev_direction%>"=="blog"){
+    window.location="/blog/entries/<%=@blogger.id%>/<%=@entry.id%>";
+} else {
+    window.location="/entries/<%=@entry.id%>";
+}

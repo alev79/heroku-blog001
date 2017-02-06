@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20170117171335) do
+ActiveRecord::Schema.define(:version => 20170204164840) do
 
   create_table "bloggers", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -31,14 +31,29 @@ ActiveRecord::Schema.define(:version => 20170117171335) do
   add_index "bloggers", ["email"], :name => "index_bloggers_on_email", :unique => true
   add_index "bloggers", ["reset_password_token"], :name => "index_bloggers_on_reset_password_token", :unique => true
 
+  create_table "comments", :force => true do |t|
+    t.integer  "entry_id"
+    t.string   "title"
+    t.string   "body"
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "comments", ["entry_id"], :name => "index_comments_on_entry_id"
+
   create_table "entries", :force => true do |t|
     t.string   "title"
     t.text     "body"
-    t.boolean  "public_flag"
+    t.integer  "public_flag",        :default => 0, :null => false
     t.integer  "point"
-    t.datetime "created_at",                 :null => false
-    t.datetime "updated_at",                 :null => false
-    t.integer  "blogger_id",  :default => 0, :null => false
+    t.datetime "created_at",                        :null => false
+    t.datetime "updated_at",                        :null => false
+    t.integer  "blogger_id",         :default => 0, :null => false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   add_index "entries", ["blogger_id", "updated_at"], :name => "index_entries_on_blogger_id_and_updated_at"

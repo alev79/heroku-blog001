@@ -1,11 +1,16 @@
-<h1>Listing entries</h1>
+<p id="notice"><font color="red"><%= notice %></font></p>
+<h1>所有记事</h1>
 
+<a href="/blog/entries/<%=@blogger.id %>/">查看博客</a>&nbsp;&nbsp;&nbsp;
 <table>
   <tr>
-    <th>Title</th>
-    <th>Body</th>
-    <th>Public flag</th>
-    <th>Point</th>
+    <th>标题</th>
+    <th>内容</th>
+    <th>公开</th>
+    <th>分数</th>
+    <th>图像</th>
+    <th>作者</th>
+    <th>时间</th>
     <th></th>
     <th></th>
     <th></th>
@@ -17,13 +22,27 @@
     <td><%= entry.body %></td>
     <td><%= entry.public_flag %></td>
     <td><%= entry.point %></td>
-    <td><%= link_to 'Show', entry %></td>
-    <td><%= link_to 'Edit', edit_entry_path(entry) %></td>
-    <td><%= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td>
+        <%if entry.image_file_name!=nil%>
+		有
+        <%else%>
+                无
+        <%end%>
+    </td>
+    <td>
+        <%= entry.blogger.email %>
+    </td>
+    <td>
+        <%= entry.updated_at %>
+    </td>
+    <td><%= link_to '显示', entry %></td>
+    <td><%= link_to '编辑', edit_entry_path(entry) %></td>
+    <td><%= link_to '删除', entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Entry', new_entry_path %>
+<%=will_paginate @entries,:previous_label=>'上一页',:next_label=>'下一页'%>
+<%= link_to '本人新建记事', new_entry_path %>

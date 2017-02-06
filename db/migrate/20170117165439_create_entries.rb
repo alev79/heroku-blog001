@@ -6,7 +6,6 @@ class CreateEntries < ActiveRecord::Migration
       #t.boolean :public_flag
       t.integer :public_flag,:default=>"0",:null=>false
       t.integer :point
-
       t.timestamps
     end
   end

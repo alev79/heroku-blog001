@@ -1,25 +1,49 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Title:</b>
+  <b><%=t 'general.form.title'%>:</b>
   <%= @entry.title %>
 </p>
 
 <p>
-  <b>Body:</b>
+  <b><%=t 'general.form.body'%>:</b>
   <%= @entry.body %>
 </p>
 
 <p>
-  <b>Public flag:</b>
+  <b><%=t 'general.form.public_flag'%>:</b>
   <%= @entry.public_flag %>
 </p>
 
 <p>
-  <b>Point:</b>
+  <b><%=t 'general.form.point'%>:</b>
   <%= @entry.point %>
 </p>
 
+<p>
+  <%=link_to image_tag(@entry.image.url(:large),:width=>500,:height=>500),@entry.image.url %>
+</p>
 
-<%= link_to 'Edit', edit_entry_path(@entry) %> |
-<%= link_to 'Back', entries_path %>
+<hr>
+
+<div class="comment_form" id="comment_form_div">
+     <%=render @entry.comments.build%>
+</div>
+
+<hr/>
+
+<b>评论</b>
+<div class="comment" id="comment_list">
+    <% @comments_page.each do |comment| %>
+	<% if comment.body !=nil %>
+    	    <%= comment.body %> by <%=comment.name %><br />
+        <hr/>
+        <% end %>
+    <% end %>
+</div>
+
+<%=will_paginate @comments_page,:previous_label=>'上一页',:next_label=>'下一页'%>
+
+
+<%= link_to '编辑', edit_entry_path(@entry) %> |
+<%= link_to '返回', entries_path %>

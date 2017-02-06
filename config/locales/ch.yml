@@ -1,0 +1,10 @@
+ch:
+  general:
+    form:
+      title: '标题'
+      body: '正文'
+      public_flag: '公开'
+      point: '分数'
+      create_entry: '新建记事'
+      save: '保存记事'
+  site_company: '亮科技有限公司'

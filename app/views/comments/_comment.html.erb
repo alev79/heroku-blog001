@@ -1,0 +1,19 @@
+<%= form_for([comment.entry, comment],{:id=>"comment-form",:remote=>true}) do |f| %>
+   <div class="field">
+      <%= f.label :name, '投稿人名称'%><br />
+      <%= f.text_field :name %>
+   </div>
+
+   <div class="field">
+      <%= f.label :body, '正文'%><br/>
+      <%= f.text_area :body %>
+   </div>
+
+   <input type="hidden" name="blogger_id" value="<%=@blogger_id%>"/>
+
+   <input type="hidden" name="prev_direction" value="<%=@prev_direction%>"/>
+
+   <div class="actions">
+       <%= f.submit '保存'%>
+   </div>
+<% end %>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>亮博客</title>
+  <%= stylesheet_link_tag 'entries',:media=>'screen' %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tag %>
+  <%= auto_discovery_link_tag :rss,:action=>'index', :format=>'xml' %>
+</head>
+<body>
+<%= render 'common/header' %>
+<br/>
+<br/>
+<%= render 'common/menu' %>
+<section>
+<%=yield %>
+</section>
+<nav>
+</nav>
+
+
+<%= render 'common/footer' %>
+</body>
+</html>
