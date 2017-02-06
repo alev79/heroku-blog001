@@ -8,3 +8,7 @@ ch:
       create_entry: '新建记事'
       save: '保存记事'
   site_company: '亮科技有限公司'
+  devise:
+    sessions:
+      blogger:
+        signed_in: '已登录'
