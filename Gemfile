@@ -6,24 +6,24 @@ gem 'rails', '4.2.4'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-#gem 'sqlite3'
+gem 'sqlite3'
 
 gem 'devise'
 
 #gem 'mysql2','0.3.18'
-gem 'pg','0.17.1'
+#gem 'pg','0.17.1'
 
 gem 'paperclip'
 
 gem 'will_paginate'
 
 group :development, :test do
-    #gem 'mysql2','0.3.18'
+    gem 'mysql2','0.3.18'
 end
 
 group :production do
-    #gem 'pg','0.17.1'
-    #gem 'mysql2','0.3.18'
+    gem 'pg','0.17.1'
+    gem 'mysql2','0.3.18'
 end
 
 # Gems used only for assets and not required
