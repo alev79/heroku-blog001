@@ -34,4 +34,6 @@ HerokuBlog001::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  config.eager_load = false
 end
