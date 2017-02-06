@@ -1,0 +1,119 @@
+/* line 5, /home/weiliang/rails_code/heroku-blog001/app/assets/stylesheets/entries.css.scss */
+.title {
+  font-weight: bold;
+  font-size: 15pt;
+}
+
+/* line 10, /home/weiliang/rails_code/heroku-blog001/app/assets/stylesheets/entries.css.scss */
+.label {
+  font-size: 10pt;
+  font-weight: bold;
+  background-color: #FFFFDB;
+}
+
+/* line 16, /home/weiliang/rails_code/heroku-blog001/app/assets/stylesheets/entries.css.scss */
+header {
+  width: 1100px;
+  height: 60px;
+  clear: both;
+}
+
+/* line 22, /home/weiliang/rails_code/heroku-blog001/app/assets/stylesheets/entries.css.scss */
+section {
+  width: 1200px;
+  background-color: #61D060;
+  visibility: visible;
+  z-index: 0;
+  float: right;
+}
+
+/* line 30, /home/weiliang/rails_code/heroku-blog001/app/assets/stylesheets/entries.css.scss */
+nav {
+  /*
+  text-align: let;
+  font-weight: bold;
+  border: 2px solid #333333;
+  background-color: #61D060;
+  vertical-align: text-top;
+  */
+  border: 2px solid #333333;
+  background-image: url("gstar.jpg");
+  background-size: 250px 700px;
+  background-repeat: no-repeat;
+  width: 180px;
+  height: 700px;
+  float: right;
+}
+
+/* line 47, /home/weiliang/rails_code/heroku-blog001/app/assets/stylesheets/entries.css.scss */
+.entry {
+  background-color: #FFFFDB;
+  border: 1px solid #333333;
+  font-size: 10pt;
+  width: 200px;
+  margin: 3px;
+  z-index: 4;
+  cursor: move;
+}
+
+/* line 57, /home/weiliang/rails_code/heroku-blog001/app/assets/stylesheets/entries.css.scss */
+.comment {
+  background-color: #FFFFDB;
+  border: 1px solid #333333;
+  font-size: 10pt;
+  width: 700px;
+  margin: 3px;
+  z-index: 4;
+  cursor: move;
+}
+
+/* line 67, /home/weiliang/rails_code/heroku-blog001/app/assets/stylesheets/entries.css.scss */
+.list_menu {
+  text-align: left;
+  font-size: 9pt;
+  background-color: #67BA37;
+}
+
+/* line 73, /home/weiliang/rails_code/heroku-blog001/app/assets/stylesheets/entries.css.scss */
+.datetime {
+  font-size: 8pt;
+}
+
+/* line 77, /home/weiliang/rails_code/heroku-blog001/app/assets/stylesheets/entries.css.scss */
+.menu_text {
+  text-align: left;
+  font-weight: bold;
+  color: #3725A8;
+}
+
+/* line 83, /home/weiliang/rails_code/heroku-blog001/app/assets/stylesheets/entries.css.scss */
+.entry_form {
+  font-weight: bold;
+  font-size: 12pt;
+  background-color: #FFFFDB;
+  border: 1px solid #333333;
+  width: 700px;
+  margin: 3px;
+}
+
+/* line 92, /home/weiliang/rails_code/heroku-blog001/app/assets/stylesheets/entries.css.scss */
+.login_user_info {
+  text-align: right;
+  font-weight: bold;
+  font-size: 10pt;
+}
+
+/* line 98, /home/weiliang/rails_code/heroku-blog001/app/assets/stylesheets/entries.css.scss */
+.sub_header_info {
+  text-align: center;
+  font-size: 12pt;
+  font-weight: bold;
+  color: #3725A8;
+  width: 100%;
+}
+
+/* line 106, /home/weiliang/rails_code/heroku-blog001/app/assets/stylesheets/entries.css.scss */
+footer {
+  clear: both;
+  text-align: center;
+}
