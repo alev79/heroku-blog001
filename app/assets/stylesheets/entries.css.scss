@@ -25,6 +25,7 @@ section{
   visibility: visible;
   z-index: 0;
   float: right;
+  position: fixed;
 }
 
 nav{
@@ -42,6 +43,7 @@ nav{
   width: 180px;
   height: 700px;
   float: right;
+  position:fixed;
 }
 
 .entry{

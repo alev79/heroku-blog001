@@ -35,6 +35,7 @@ section{
   z-index: 0;
   float: right;
   margin: 3px;
+  position: fixed;
 }
 
 nav{
@@ -46,6 +47,7 @@ nav{
   background-repeat: no-repeat;
   
   vertical-align: text-top;
+  position: fixed;
   /*width: 15%;
   height: 600px;*/
   width: 180px;
