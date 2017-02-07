@@ -26,7 +26,7 @@ section{
   z-index: 0;
   position: relative;
   #margin-left: 220px;
-  top: 0px;
+  top: -700px;
   left: 220px;
 }
 
@@ -44,7 +44,7 @@ nav{
   background-repeat: no-repeat;
   width: 180px;
   height: 700px;
-  float: left;
+  #float: left;
   position:fixed;
 }
 
@@ -105,11 +105,6 @@ nav{
   font-weight: bold;
   color: #3725A8;
   width: 100%;
-}
-
-#main_content{
-  clear: both;
-  background-color: blue;
 }
 
 footer{
