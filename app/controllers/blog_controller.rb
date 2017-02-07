@@ -3,7 +3,8 @@ class BlogController < ApplicationController
      begin
        @blogger = Blogger.find(params[:id])
        @current_user_email = @blogger.email
-       @entries = Entry.where("blogger_id=?",@blogger.id).public_entries.latest
+       #@entries = Entry.where("blogger_id=?",@blogger.id).public_entries.latest
+       @entries = Entry.where("blogger_id=?",@blogger.id)
      rescue ActiveRecord::RecordNotFound=>e
      
      end
